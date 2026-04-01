@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import heroImg from './assets/hero.png'
 import { personalInfo, contactInfo, socialLinks } from './data/personalInfo'
 import { techStackData } from './data/techStack'
 import { projectsData } from './data/projects'
@@ -200,8 +199,8 @@ function App() {
           </div>
         </div>
 
-        <div className="hero-art">
-          <img src={heroImg} width="260" height="274" alt="Ilustracao principal" />
+        <div className="hero-art" aria-hidden="true">
+          <div className="js-icon" />
           <blockquote>{personalInfo.quote}</blockquote>
         </div>
 

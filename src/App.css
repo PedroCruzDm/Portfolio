@@ -155,16 +155,25 @@
   align-content: center;
 }
 
-.hero-art img {
-  width: min(72%, 260px);
-  height: auto;
-  image-rendering: pixelated;
-  filter: grayscale(1) contrast(1.35);
-  animation: bob 2.2s steps(2, end) infinite;
+.js-icon {
+  width: min(61.6%, 188px);
+  aspect-ratio: 1;
+  background: #000;
+  border: 3px solid var(--color-border);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  box-shadow: 8px 8px 0 rgba(15, 23, 42, 0.2);
+  animation: bob 2.2s ease-in-out infinite;
+  position: relative;
+  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: #ffffff;
+  letter-spacing: -0.08em;
 }
 
-body.night-mode .hero-art img {
-  filter: grayscale(1) contrast(1.35) invert(1);
+.js-icon::before {
+  content: 'JS';
 }
 
 .hero-art blockquote {
@@ -349,10 +358,13 @@ body.night-mode .hero-art img {
 .timeline li {
   position: relative;
   min-height: 82px;
-  padding: var(--space-3) var(--space-2) var(--space-3) 0;
+  padding: var(--space-4) var(--space-3) var(--space-4) var(--space-3);
   border: 2px solid var(--color-border);
   background: #eef1f5;
   box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
 .timeline li::before {
@@ -360,7 +372,7 @@ body.night-mode .hero-art img {
 }
 
 .timeline .year {
-  margin: 0 0 var(--space-1);
+  margin: 0 0 var(--space-3);
   font-weight: 800;
   letter-spacing: 0.05em;
 }
@@ -382,8 +394,8 @@ body.night-mode .hero-art img {
     display: none;
   }
 
-  .hero-art img {
-    width: min(62%, 220px);
+  .js-icon {
+    width: min(53%, 171px);
   }
 
   .section {
@@ -419,6 +431,11 @@ body.night-mode .hero-art img {
 
   .project-image {
     height: 144px;
+  }
+
+  .js-icon {
+    width: min(61.6%, 154px);
+    font-size: clamp(2.2rem, 6vw, 4rem);
   }
 
   .timeline {
