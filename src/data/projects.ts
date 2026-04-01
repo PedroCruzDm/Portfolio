@@ -26,7 +26,7 @@ export const projectsData: Project[] = [
   {
     id: "orbis",
     title: "Orbis",
-    description: "Aplicativo em desenvolvimento com informações astronômicas e espaciais.",
+    description: "Orbis é um aplicativo móvel projetado para ajudar usuários a criar, organizar e melhorar suas rotinas diárias de forma sustentável e adaptativa. Em vez de promover a produtividade exaustiva, o app prioriza o bem-estar, ajustando-se às necessidades individuais de sono, foco e tempo livre. Diferente de ferramentas tradicionais que impõem metas rígidas, o Orbis se adapta ao usuário, reconhecendo imprevistos da vida real e focando no progresso constante, não na perfeição.",
     image: "/images/projects/Orbis.png",
     status: "in-development",
     technologies: ["React Native", "CSS", "Firebase", "TypeScript", "Expo"],

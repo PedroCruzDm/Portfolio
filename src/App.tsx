@@ -3,6 +3,7 @@ import { personalInfo, contactInfo, socialLinks } from './data/personalInfo'
 import { techStackData } from './data/techStack'
 import { projectsData } from './data/projects'
 import { timelineData } from './data/timeline'
+import { ReadMore } from './components/ReadMore'
 import './App.css'
 
 const NIGHT_PLAYLIST = [
@@ -236,7 +237,7 @@ function App() {
                 {statusLabel[project.status] ?? project.status}
               </p>
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <ReadMore text={project.description} charLimit={300} />
               <ul className="chips">
                 {project.technologies.map((tech) => (
                   <li key={tech}>{tech}</li>

@@ -268,6 +268,23 @@
   color: var(--color-accent-contrast);
 }
 
+.btn-read-more {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fs-300);
+  padding: var(--space-2) 0;
+  transition: color 0.15s ease;
+  font-family: var(--font-body);
+}
+
+.btn-read-more:hover {
+  color: var(--color-text);
+}
+
 .card h3 {
   margin: 0 0 var(--space-2);
   color: var(--color-text);
