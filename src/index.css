@@ -1,0 +1,135 @@
+:root {
+  color-scheme: light;
+
+  --color-bg: #e9eaec;
+  --color-surface: #f5f6f8;
+  --color-surface-strong: #ffffff;
+  --color-text: #13161a;
+  --color-text-muted: #4b5563;
+  --color-border: #20242a;
+  --color-accent: #0f172a;
+  --color-accent-contrast: #f8fafc;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+
+  --shadow-card: 5px 5px 0 var(--color-border);
+  --shadow-panel: 7px 7px 0 var(--color-border);
+
+  --font-body: 'Courier New', Courier, monospace;
+  --font-heading: 'Courier New', Courier, monospace;
+  --font-mono: 'Courier New', Courier, monospace;
+
+  --fs-100: clamp(0.78rem, 0.74rem + 0.2vw, 0.88rem);
+  --fs-200: clamp(0.92rem, 0.86rem + 0.3vw, 1rem);
+  --fs-300: clamp(1rem, 0.95rem + 0.4vw, 1.12rem);
+  --fs-400: clamp(1.12rem, 1.05rem + 0.5vw, 1.3rem);
+  --fs-500: clamp(1.35rem, 1.2rem + 0.85vw, 1.8rem);
+  --fs-600: clamp(1.8rem, 1.4rem + 1.7vw, 2.8rem);
+
+  font-size: 18px;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  letter-spacing: 0.14px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 10% 0%, #f9fafb 0%, transparent 38%),
+    radial-gradient(circle at 95% 5%, #dde2e8 0%, transparent 30%),
+    var(--color-bg);
+  color: var(--color-text);
+}
+
+#root {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  min-height: 100svh;
+  border-inline: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: filter 0.35s ease;
+}
+
+body.night-mode {
+  background: #111111;
+}
+
+body.night-mode #root {
+  filter: invert(1);
+}
+
+body.night-mode #root img {
+  filter: invert(1);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--fs-600);
+  letter-spacing: -0.6px;
+}
+
+h2 {
+  font-size: var(--fs-500);
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: var(--fs-400);
+}
+
+p {
+  margin: 0;
+  font-size: var(--fs-200);
+}
+
+code,
+.counter {
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+  display: inline-flex;
+  border-radius: 0;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
