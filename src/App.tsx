@@ -178,6 +178,10 @@ function App() {
             Fale comigo
           </a>
 
+          <p className="email-visible">
+            E-mail: <label className="email-label" aria-hidden="true">{contactInfo.email}</label>
+          </p>
+
           <ul className="social-list" aria-label="Redes sociais">
             {socialLinks.map((link) => (
               <li key={link.platform}>
@@ -206,6 +210,34 @@ function App() {
         </div>
 
       </header>
+
+      <section className="section about-section" id="about">
+        <div className="about-grid">
+          <div className="about-copy">
+            <p className="eyebrow">Sobre mim</p>
+            <h2>Construo interfaces com foco em clareza, ritmo e evolução constante.</h2>
+            <p>
+              Sou um estudante que está há 3 anos explorando a área da tecnologia e me apaixonei por
+              programação. Tenho muito interesse em entender como sistemas, sites e aplicativos
+              funcionam por trás das telas.
+            </p>
+            <p>
+              Busco evoluir constantemente, aprender cada vez mais e descobrir novas formas de criar
+              soluções úteis, bem construídas e com propósito.
+            </p>
+          </div>
+
+          <aside className="about-card card" aria-label="Resumo sobre mim">
+            <h3>Como eu trabalho</h3>
+            <ul className="about-points">
+              <li>Ouço e planejo a ideia para entender bem o objetivo do projeto.</li>
+              <li>Pesquiso e defino quais tecnologias fazem mais sentido para a solução.</li>
+              <li>Desenvolvo a aplicação com foco em organização, funcionalidade e evolução constante.</li>
+            </ul>
+            <p className="about-note">{personalInfo.quote}</p>
+          </aside>
+        </div>
+      </section>
 
       <section className="section" id="stack">
         <h2>Stack Tecnologica</h2>

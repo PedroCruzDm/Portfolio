@@ -111,8 +111,19 @@
   transform: translate(-2px, -2px);
 }
 
+.email-visible {
+  margin: var(--space-3) 0 var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--fs-200);
+}
+
+.email-label {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
 .social-list {
-  margin: var(--space-7) 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -194,6 +205,58 @@
   margin: 0 0 var(--space-4);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.about-section {
+  background: linear-gradient(180deg, #f4f6f9 0%, var(--color-surface) 100%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.about-copy h2 {
+  margin: 0 0 var(--space-3);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.about-copy p {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-card {
+  align-self: stretch;
+}
+
+.about-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: var(--space-2);
+  color: var(--color-text);
+}
+
+.about-points li {
+  line-height: 1.5;
+}
+
+.about-note {
+  margin: var(--space-4) 0 0;
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--color-border);
+  font-style: italic;
+  color: var(--color-text-muted);
 }
 
 .stack-grid,
@@ -417,6 +480,10 @@
 
   .section {
     padding: var(--space-5);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 
   .projects-grid {

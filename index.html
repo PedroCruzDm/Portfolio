@@ -1,12 +1,365 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>omori-portfolio</title>
+    <title>Portfólio Pedro</title>
   </head>
   <body>
+    <noscript>
+      <style>
+        :root {
+          --bg: #f2f4f8;
+          --surface: #ffffff;
+          --surface-soft: #eef1f6;
+          --text: #0f172a;
+          --muted: #475569;
+          --line: #1f2937;
+          --accent: #0ea5e9;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 45%, #e6ebf2 100%);
+          color: var(--text);
+          line-height: 1.6;
+        }
+
+        .ns-wrap {
+          width: min(1080px, 92vw);
+          margin: 26px auto 46px;
+          display: grid;
+          gap: 16px;
+        }
+
+        .ns-warning {
+          margin: 0;
+          border: 2px solid var(--line);
+          background: #fef3c7;
+          padding: 10px 14px;
+          font-weight: 700;
+          color: #78350f;
+        }
+
+        .ns-card {
+          border: 2px solid var(--line);
+          background: var(--surface);
+          padding: 18px;
+          box-shadow: 6px 6px 0 rgba(15, 23, 42, 0.12);
+        }
+
+        .ns-hero {
+          display: grid;
+          grid-template-columns: 1.25fr 0.75fr;
+          gap: 18px;
+          background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);
+        }
+
+        .ns-eyebrow {
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: var(--muted);
+        }
+
+        h1,
+        h2,
+        h3 {
+          margin: 0 0 10px;
+          line-height: 1.15;
+        }
+
+        .ns-hero p {
+          margin: 0 0 8px;
+        }
+
+        .ns-role {
+          font-weight: 700;
+        }
+
+        .ns-contact {
+          margin-top: 10px;
+          color: var(--muted);
+        }
+
+        .ns-social {
+          margin: 12px 0 0;
+          padding-left: 18px;
+        }
+
+        .ns-quote {
+          height: 100%;
+          display: grid;
+          place-content: center;
+          text-align: center;
+          padding: 16px;
+          border: 2px dashed var(--line);
+          background: #f8fafc;
+          font-style: italic;
+          color: var(--muted);
+        }
+
+        .ns-grid-2 {
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          gap: 16px;
+        }
+
+        .ns-about-list,
+        .ns-list {
+          margin: 0;
+          padding-left: 18px;
+          display: grid;
+          gap: 8px;
+        }
+
+        .ns-columns {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 12px;
+        }
+
+        .ns-mini {
+          border: 1.5px solid var(--line);
+          background: var(--surface-soft);
+          padding: 12px;
+        }
+
+        .ns-projects {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 12px;
+        }
+
+        .ns-project {
+          border: 1.5px solid var(--line);
+          background: var(--surface-soft);
+          padding: 12px;
+        }
+
+        .ns-project img {
+          width: 100%;
+          height: 148px;
+          object-fit: cover;
+          border: 1.5px solid var(--line);
+          margin-bottom: 8px;
+          background: #e2e8f0;
+        }
+
+        .ns-tag {
+          display: inline-block;
+          border: 1px solid var(--line);
+          background: #ffffff;
+          padding: 2px 7px;
+          margin: 0 6px 6px 0;
+          font-size: 0.76rem;
+          font-weight: 700;
+        }
+
+        .ns-status {
+          margin: 0 0 8px;
+          font-size: 0.74rem;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--muted);
+          font-weight: 700;
+        }
+
+        .ns-timeline {
+          margin: 0;
+          padding-left: 18px;
+          display: grid;
+          gap: 12px;
+        }
+
+        .ns-timeline li {
+          border-left: 3px solid var(--line);
+          padding-left: 10px;
+        }
+
+        .ns-year {
+          margin: 0 0 4px;
+          font-size: 0.84rem;
+          font-weight: 700;
+          color: var(--muted);
+        }
+
+        .ns-link {
+          color: #0369a1;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
+        .ns-link:hover {
+          text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+          .ns-hero,
+          .ns-grid-2,
+          .ns-columns,
+          .ns-projects {
+            grid-template-columns: 1fr;
+          }
+
+          .ns-wrap {
+            width: min(1080px, 95vw);
+            margin-top: 12px;
+          }
+        }
+      </style>
+
+      <main class="ns-wrap" aria-label="Portfólio sem JavaScript">
+        <p class="ns-warning">JavaScript está desativado. Esta é a versão estática do portfólio.</p>
+
+        <section class="ns-card ns-hero" id="hero-noscript">
+          <div>
+            <p class="ns-eyebrow">Portfólio 2026</p>
+            <h1>João Pedro da Cruz</h1>
+            <p class="ns-role">Desenvolvedor Front-End</p>
+            <p>Front-End Developer em busca do Fullstack.</p>
+
+            <p class="ns-contact">São Paulo, Brasil • Disponível para novos projetos</p>
+            <p>
+              <a class="ns-link" href="mailto:joaope4dro@gmail.com">joaope4dro@gmail.com</a>
+            </p>
+
+            <ul class="ns-social" aria-label="Redes sociais">
+              <li><a class="ns-link" href="https://github.com/PedroCruzDm" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a class="ns-link" href="https://www.linkedin.com/in/jo%C3%A3o-pedro-cruz-237131277/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a class="ns-link" href="https://www.youtube.com/@ApenasDev" target="_blank" rel="noreferrer">YouTube</a></li>
+            </ul>
+          </div>
+
+          <aside class="ns-quote">“A criatividade flui através de mim”</aside>
+        </section>
+
+        <section class="ns-card ns-grid-2" id="about-noscript">
+          <div>
+            <p class="ns-eyebrow">Sobre mim</p>
+            <h2>Construo interfaces com foco em clareza, ritmo e evolução constante.</h2>
+            <p>
+              Sou um estudante que está há 3 anos explorando a área da tecnologia e me apaixonei por
+              programação. Tenho muito interesse em entender como sistemas, sites e aplicativos funcionam
+              por trás das telas.
+            </p>
+            <p>
+              Busco evoluir constantemente, aprender cada vez mais e descobrir novas formas de criar
+              soluções úteis, bem construídas e com propósito.
+            </p>
+          </div>
+
+          <aside class="ns-mini" aria-label="Como eu trabalho">
+            <h3>Como eu trabalho</h3>
+            <ol class="ns-about-list">
+              <li>Ouço e planejo a ideia para entender bem o objetivo do projeto.</li>
+              <li>Pesquiso e defino quais tecnologias fazem mais sentido para a solução.</li>
+              <li>Desenvolvo a aplicação com foco em organização, funcionalidade e evolução constante.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section class="ns-card" id="stack-noscript">
+          <h2>Stack Tecnológica</h2>
+          <div class="ns-columns">
+            <article class="ns-mini">
+              <h3>Frontend</h3>
+              <p>JavaScript, React, HTML5, CSS3, Java</p>
+            </article>
+            <article class="ns-mini">
+              <h3>Backend &amp; Databases</h3>
+              <p>JavaScript, PHP, Firebase, MySQL</p>
+            </article>
+            <article class="ns-mini">
+              <h3>Ferramentas</h3>
+              <p>Git, Docker, Figma, Excel, Azure</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="ns-card" id="projects-noscript">
+          <h2>Projetos</h2>
+          <div class="ns-projects">
+            <article class="ns-project">
+              <img src="/images/projects/pontuar-calendar.png" alt="Calendário Escolar" />
+              <p class="ns-status">Operacional</p>
+              <h3>Calendário Escolar</h3>
+              <p>Aplicativo de calendário escolar com React, CSS e Firebase.</p>
+              <p><span class="ns-tag">React</span><span class="ns-tag">CSS3</span><span class="ns-tag">Firebase</span></p>
+              <p><a class="ns-link" href="https://pedrocruzdm.github.io/Etec_Calendario/" target="_blank" rel="noreferrer">Visualizar projeto</a></p>
+            </article>
+
+            <article class="ns-project">
+              <img src="/images/projects/Pontuar_calendario.jpg" alt="Pontuar Calendar" />
+              <p class="ns-status">Operacional</p>
+              <h3>Pontuar Calendar</h3>
+              <p>Protótipo de calendário escolar com compartilhamento em tempo real.</p>
+              <p><span class="ns-tag">React</span><span class="ns-tag">CSS3</span><span class="ns-tag">Firebase</span></p>
+            </article>
+
+            <article class="ns-project">
+              <img src="/images/projects/Orbis.png" alt="Orbis" />
+              <p class="ns-status">Em desenvolvimento</p>
+              <h3>Orbis</h3>
+              <p>Aplicativo móvel para criar e melhorar rotinas com foco em bem-estar e progresso constante.</p>
+              <p>
+                <span class="ns-tag">React Native</span><span class="ns-tag">TypeScript</span><span class="ns-tag">Firebase</span>
+              </p>
+            </article>
+
+            <article class="ns-project">
+              <p class="ns-status">Concluído</p>
+              <h3>Filtro de planilhas Excel</h3>
+              <p>
+                Script em JavaScript que lê arquivos XLSX, aplica regras de validação e gera um CSV com os
+                dados filtrados e o resultado final.
+              </p>
+              <p><span class="ns-tag">JavaScript</span><span class="ns-tag">Excel</span></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="ns-card" id="timeline-noscript">
+          <h2>Jornada</h2>
+          <ol class="ns-timeline">
+            <li>
+              <p class="ns-year">2022</p>
+              <h3>Início da Jornada</h3>
+              <p>Primeiros passos com lógica de programação, Kotlin e Android Studio.</p>
+            </li>
+            <li>
+              <p class="ns-year">2023</p>
+              <h3>Primeiro contato com desenvolvimento web</h3>
+              <p>Exploração de HTML e CSS para construir e melhorar interfaces front-end.</p>
+            </li>
+            <li>
+              <p class="ns-year">2024</p>
+              <h3>Aprimoramento em Web e Mobile</h3>
+              <p>Estudos em algoritmos, UML, SQL/NoSQL, APIs, Azure, Docker e foco crescente em Fullstack.</p>
+            </li>
+            <li>
+              <p class="ns-year">2025</p>
+              <h3>Explorando e revisando conceitos</h3>
+              <p>Prática com estrutura de dados, grafos, Python, C, Assembly e Java em projetos pessoais.</p>
+            </li>
+            <li>
+              <p class="ns-year">2026</p>
+              <h3>Momento Atual</h3>
+              <p>Expansão para hardware, redes, segurança da informação e automações em paralelo ao web/mobile.</p>
+            </li>
+          </ol>
+        </section>
+      </main>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
