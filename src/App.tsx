@@ -17,7 +17,7 @@ const DAY_PLAYLIST = [
 
 const isNightTime = () => {
   const hour = new Date().getHours()
-  return hour >= 20 || hour < 7
+  return hour >= 17 || hour < 8
 }
 
 function App() {
